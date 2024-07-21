@@ -1,6 +1,6 @@
 # drawarrow
 
-Draw arrows for matplotlib
+Drawing arrows for matplotlib made easy.
 
 <br><br>
 
