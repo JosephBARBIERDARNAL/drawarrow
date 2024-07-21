@@ -4,6 +4,13 @@
 
 Drawing arrows for matplotlib made easy.
 
+Table of content:
+
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Usage guide](#usage-guide)
+- [Contributing](#contributions)
+
 <br><br>
 
 # Installation
@@ -141,7 +148,7 @@ plt.show()
 
 <br><br>
 
-## Contributions
+# Contributions
 
 Contributions (and feedback) are welcome.
 
