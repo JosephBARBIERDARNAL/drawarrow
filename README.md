@@ -1,5 +1,7 @@
 # drawarrow
 
+<img src="logo/logo.png" alt="drawarrow logo" align="right" width="200px"/>
+
 Drawing arrows for matplotlib made easy.
 
 <br><br>
