@@ -151,9 +151,13 @@ TODO features:
 
 #### Installation for contributions
 
+_Note: the following steps are for Mac, but very different in other OS._
+
 - Fork this repo
 - `git clone https://github.com/yourusername/drawarrow.git`
 - `cd drawarrow`
+- `python -m venv venv`
+- `source venv/bin/activate`
 - `pip install -r requirements.txt`
 - `pip install -e .`
 - `git checkout -b feature-name`
