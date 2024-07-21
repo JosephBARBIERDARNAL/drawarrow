@@ -149,4 +149,14 @@ TODO features:
 - draw arrow with an inflection point (see [this](https://python-graph-gallery.com/web-stacked-area-with-inflexion-arrows/))
 - ...
 
+#### Installation for contributions
+
+- Fork this repo
+- `git clone https://github.com/yourusername/drawarrow.git`
+- `cd drawarrow`
+- `pip install -r requirements.txt`
+- `pip install -e .`
+- `git checkout -b feature-name`
+- start coding!
+
 <br><br><br>
