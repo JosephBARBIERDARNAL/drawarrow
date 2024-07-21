@@ -1,17 +1,19 @@
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyArrowPatch
+from matplotlib.figure import Figure
+from matplotlib.axes import Axes
 
 
 def _create_arrow(
     tail_position,
     head_position,
-    invert=False,
-    radius=0.1,
+    invert: bool = False,
+    radius: float = 0.1,
     color="black",
-    tail_width=0.5,
-    head_width=4,
-    head_length=8,
-    linewidth=0.5,
+    tail_width: float = 0.5,
+    head_width: float = 4,
+    head_length: float = 8,
+    linewidth: float = 0.5,
 ):
     """
     Create a FancyArrowPatch object.
@@ -33,7 +35,9 @@ def _create_arrow(
     )
 
 
-def fig_arrow(tail_position, head_position, fig=None, **kwargs):
+def fig_arrow(
+    tail_position, head_position, fig: Figure | None = None, **kwargs
+) -> None:
     """
     Draw an arrow on a Matplotlib Figure.
 
@@ -52,7 +56,9 @@ def fig_arrow(tail_position, head_position, fig=None, **kwargs):
     fig.patches.append(arrow)
 
 
-def ax_arrow(tail_position, head_position, ax=None, **kwargs):
+def ax_arrow(
+    tail_position, head_position, ax: Axes | None = None, **kwargs
+) -> FancyArrowPatch:
     """
     Draw an arrow on a Matplotlib Axes.
 
