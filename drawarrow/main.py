@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import FancyArrowPatch
 from matplotlib.figure import Figure
 from matplotlib.axes import Axes
+import warnings
 
 
 def _create_arrow(
@@ -24,6 +25,12 @@ def _create_arrow(
     Returns:
     - FancyArrowPatch: The arrow patch object.
     """
+
+    if invert and radius == 0:
+        warnings.warn(
+            "`invert` argument is ignored when radius is 0. Use `invert=False` to remove this warning."
+        )
+
     kw = dict(
         arrowstyle=f"Simple, tail_width={tail_width}, head_width={head_width}, head_length={head_length}",
         color=color,
@@ -39,7 +46,7 @@ def fig_arrow(
     tail_position, head_position, fig: Figure | None = None, **kwargs
 ) -> None:
     """
-    Draw an arrow on a Matplotlib Figure.
+    Draw an arrow on a Matplotlib Figure using a FancyArrowPatch.
 
     Parameters:
     - fig (Figure): The matplotlib figure to draw the arrow on.
@@ -60,7 +67,7 @@ def ax_arrow(
     tail_position, head_position, ax: Axes | None = None, **kwargs
 ) -> FancyArrowPatch:
     """
-    Draw an arrow on a Matplotlib Axes.
+    Draw an arrow on a Matplotlib Axes using a FancyArrowPatch.
 
     Parameters:
     - ax (Axes): The matplotlib axes to draw the arrow on. If None, uses the current axes.
@@ -74,4 +81,3 @@ def ax_arrow(
 
     arrow = _create_arrow(tail_position, head_position, **kwargs)
     ax.add_patch(arrow)
-    return arrow

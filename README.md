@@ -45,14 +45,14 @@ plt.show()
 `drawarrow` provides 2 functions:
 
 - `fig_arrow()`: draw an arrow on a Matplotlib figure (e.g. the whole chart)
-- `ax_arrow()`: draw an arrow on Matplotlib axe (e.g. a subplot)
+- `ax_arrow()`: draw an arrow on Matplotlib axes (e.g. a subplot)
 
-The difference between mainly lies in their coordinates. An arrow on a Figure would usually be between 0 and 1 for both x and y axis. However, when drawing an arrow on an Axes, it's on the data coordinates.
+The difference between those functions mainly lies in their coordinates. An arrow on a Figure would usually be between 0 and 1 for both x and y axis. However, when drawing an arrow on an Axes, it's on the data coordinates.
 
 Those functions have a set a common arguments:
 
-- `tail_position`: position of the tail of the arrow (on the figure/axes)
-- `head_position`: position of the head of the arrow (on the figure/axes)
+- `tail_position` (array-like of length 2): position of the tail of the arrow (on the figure/axes)
+- `head_position` (array-like of length 2): position of the head of the arrow (on the figure/axes)
 - `invert` (bool, default to False): whether to invert or not the angle of the arrow (only used if `radius`!=0)
 - `radius` (float, default to 0.1):
 - `color`: color of the arrow,
@@ -146,6 +146,44 @@ plt.show()
 
 ![](img/fig_arrow-2.png)
 
+<br>
+
+## Tips and tricks
+
+### Straight arrow
+
+To draw a straight arrow, you just have to pass `radius=0`:
+
+```python
+import matplotlib.pyplot as plt
+from drawarrow import fig_arrow
+
+fig, ax = plt.subplots(dpi=300)
+fig_arrow((0.3, 0.3), (0.8, 0.8), radius=0, fig=fig)
+
+plt.savefig("img/tips-and-tricks-1.png", dpi=300)
+plt.show()
+```
+
+![first tips](img/tips-and-tricks-1.png)
+
+### Backward arrow
+
+`radius` has no real bounds in terms of possible values:
+
+```python
+import matplotlib.pyplot as plt
+from drawarrow import fig_arrow
+
+fig, ax = plt.subplots(dpi=300)
+fig_arrow((0.3, 0.3), (0.8, 0.8), radius=2, fig=fig)
+
+plt.savefig("img/tips-and-tricks-2.png", dpi=300)
+plt.show()
+```
+
+![first tips](img/tips-and-tricks-2.png)
+
 <br><br>
 
 # Contributions
@@ -161,7 +199,7 @@ TODO features:
 
 #### Installation for contributions
 
-_Note: the following steps are for Mac, but very different in other OS._
+_Note: the following steps are for Mac, but not very different in other OS._
 
 - Fork this repo
 - `git clone https://github.com/yourusername/drawarrow.git`
