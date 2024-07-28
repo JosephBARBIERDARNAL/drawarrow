@@ -19,7 +19,14 @@ def _create_arrow(
     Create a FancyArrowPatch object.
 
     Parameters:
-    [... same as before ...]
+    - `tail_position` (array-like of length 2): position of the tail of the arrow (on the figure/axes)
+    - `head_position` (array-like of length 2): position of the head of the arrow (on the figure/axes)
+    - `invert` (bool, default to False): whether to invert or not the angle of the arrow (only used if `radius`!=0)
+    - `radius` (float, default to 0.1):
+    - `tail_width` (float, default to 0.5): Width of the tail of the arrow
+    - `head_width` (float, default to 4): Head width of the tail of the arrow
+    - `head_length` (float, default to 8): Head length of the tail of the arrow
+    - `FAPargs`: FancyArrowPatch additional arguments (color, linewidth, alpha...)
 
     Returns:
     - FancyArrowPatch: The arrow patch object.
@@ -47,8 +54,9 @@ def fig_arrow(
     Draw an arrow on a Matplotlib Figure using a FancyArrowPatch.
 
     Parameters:
+    - `tail_position` (array-like of length 2): position of the tail of the arrow (on the figure/axes)
+    - `head_position` (array-like of length 2): position of the head of the arrow (on the figure/axes)
     - fig (Figure): The matplotlib figure to draw the arrow on.
-    [... other parameters same as _create_arrow ...]
 
     Returns:
     - None
@@ -61,15 +69,14 @@ def fig_arrow(
     fig.patches.append(arrow)
 
 
-def ax_arrow(
-    tail_position, head_position, ax: Axes | None = None, **kwargs
-) -> FancyArrowPatch:
+def ax_arrow(tail_position, head_position, ax: Axes | None = None, **kwargs) -> None:
     """
     Draw an arrow on a Matplotlib Axes using a FancyArrowPatch.
 
     Parameters:
+    - `tail_position` (array-like of length 2): position of the tail of the arrow (on the figure/axes)
+    - `head_position` (array-like of length 2): position of the head of the arrow (on the figure/axes)
     - ax (Axes): The matplotlib axes to draw the arrow on. If None, uses the current axes.
-    [... other parameters same as _create_arrow ...]
 
     Returns:
     - FancyArrowPatch: The arrow patch object.
