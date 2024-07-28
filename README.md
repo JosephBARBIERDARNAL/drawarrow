@@ -55,11 +55,11 @@ Those functions have a set a common arguments:
 - `head_position` (array-like of length 2): position of the head of the arrow (on the figure/axes)
 - `invert` (bool, default to False): whether to invert or not the angle of the arrow (only used if `radius`!=0)
 - `radius` (float, default to 0.1):
-- `color`: color of the arrow,
 - `tail_width` (float, default to 0.5): Width of the tail of the arrow
 - `head_width` (float, default to 4): Head width of the tail of the arrow
 - `head_length` (float, default to 8): Head length of the tail of the arrow
 - `linewidth` (float, default to 0.5): Width of the body of the arrow
+- `color`: color of the arrow,
 
 <br>
 
@@ -161,7 +161,6 @@ from drawarrow import fig_arrow
 fig, ax = plt.subplots(dpi=300)
 fig_arrow((0.3, 0.3), (0.8, 0.8), radius=0, fig=fig)
 
-plt.savefig("img/tips-and-tricks-1.png", dpi=300)
 plt.show()
 ```
 
@@ -178,7 +177,6 @@ from drawarrow import fig_arrow
 fig, ax = plt.subplots(dpi=300)
 fig_arrow((0.3, 0.3), (0.8, 0.8), radius=2, fig=fig)
 
-plt.savefig("img/tips-and-tricks-2.png", dpi=300)
 plt.show()
 ```
 
@@ -210,5 +208,11 @@ _Note: the following steps are for Mac, but not very different in other OS._
 - `pip install -e .`
 - `git checkout -b feature-name`
 - start coding!
+
+<br><br>
+
+# Acknowledgement
+
+Thanks [pizzadude](https://pizzadude.dk/) for the font used in the logo.
 
 <br><br><br>
