@@ -198,8 +198,6 @@ Contributions (and feedback) are welcome.
 
 TODO features:
 
-- control opacity (alpha parameter in matplotlib)
-- control zorder
 - draw arrow with an inflection point (see [this](https://python-graph-gallery.com/web-stacked-area-with-inflexion-arrows/))
 - ...
 
