@@ -1,6 +1,6 @@
 # drawarrow
 
-<img src="logo/logo.png" alt="drawarrow logo" align="right" width="200px"/>
+<img src="https://github.com/JosephBARBIERDARNAL/drawarrow/blob/main/logo/logo.png?raw=true" alt="drawarrow logo" align="right" width="200px"/>
 
 Drawing arrows for matplotlib made easy.
 
@@ -36,7 +36,7 @@ fig_arrow(head_position=(0.5, 0.5), tail_position=(0.2, 0.7), fig=fig, color="r"
 plt.show()
 ```
 
-![](img/quick-start.png)
+![](https://github.com/JosephBARBIERDARNAL/drawarrow/blob/main/img/quick-start.png?raw=true)
 
 <br><br>
 
@@ -79,7 +79,7 @@ ax_arrow((2, 8), (8, 2), ax=ax, color="blue", radius=0.3)
 plt.show()
 ```
 
-![](img/ax_arrow-1.png)
+![](https://github.com/JosephBARBIERDARNAL/drawarrow/blob/main/img/ax_arrow-1.png?raw=true)
 
 ### Usage with multiple subplots
 
@@ -99,7 +99,7 @@ for ax in axs.flat:
 plt.show()
 ```
 
-![](img/ax_arrow-2.png)
+![](https://github.com/JosephBARBIERDARNAL/drawarrow/blob/main/img/ax_arrow-2.png?raw=true)
 
 <br>
 
@@ -119,7 +119,7 @@ fig_arrow((0.3, 0.3), (0.8, 0.8), fig=fig)
 plt.show()
 ```
 
-![](img/fig_arrow-1.png)
+![](https://github.com/JosephBARBIERDARNAL/drawarrow/blob/main/img/fig_arrow-1.png?raw=true)
 
 ### More complex usage
 
@@ -144,7 +144,7 @@ fig_arrow(
 plt.show()
 ```
 
-![](img/fig_arrow-2.png)
+![](https://github.com/JosephBARBIERDARNAL/drawarrow/blob/main/img/fig_arrow-2.png?raw=true)
 
 <br>
 
@@ -164,7 +164,7 @@ fig_arrow((0.3, 0.3), (0.8, 0.8), radius=0, fig=fig)
 plt.show()
 ```
 
-![first tips](img/tips-and-tricks-1.png)
+![first tips](https://github.com/JosephBARBIERDARNAL/drawarrow/blob/main/img/tips-and-tricks-1.png?raw=true)
 
 ### Backward arrow
 
@@ -180,7 +180,7 @@ fig_arrow((0.3, 0.3), (0.8, 0.8), radius=2, fig=fig)
 plt.show()
 ```
 
-![first tips](img/tips-and-tricks-2.png)
+![first tips](https://github.com/JosephBARBIERDARNAL/drawarrow/blob/main/img/tips-and-tricks-2.png?raw=true)
 
 <br><br>
 
