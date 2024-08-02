@@ -15,7 +15,15 @@ Table of content:
 
 # Installation
 
-```bash
+You can install `drawarrow` directly from PyPI with:
+
+```
+pip install drawarrow
+```
+
+Alternatively you can install the **development version** with:
+
+```
 pip install git+https://github.com/JosephBARBIERDARNAL/drawarrow.git
 ```
 
@@ -158,7 +166,7 @@ To draw a straight arrow, you just have to pass `radius=0`:
 import matplotlib.pyplot as plt
 from drawarrow import fig_arrow
 
-fig, ax = plt.subplots(dpi=300)
+fig, ax = plt.subplots()
 fig_arrow((0.3, 0.3), (0.8, 0.8), radius=0, fig=fig)
 
 plt.show()
@@ -166,7 +174,7 @@ plt.show()
 
 ![first tips](https://github.com/JosephBARBIERDARNAL/drawarrow/blob/main/img/tips-and-tricks-1.png?raw=true)
 
-### Backward arrow
+### Back and forth arrow
 
 `radius` has no real bounds in terms of possible values:
 
@@ -174,7 +182,7 @@ plt.show()
 import matplotlib.pyplot as plt
 from drawarrow import fig_arrow
 
-fig, ax = plt.subplots(dpi=300)
+fig, ax = plt.subplots()
 fig_arrow((0.3, 0.3), (0.8, 0.8), radius=2, fig=fig)
 
 plt.show()
