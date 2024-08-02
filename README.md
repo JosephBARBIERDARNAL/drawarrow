@@ -63,11 +63,14 @@ Those functions have a set a common arguments:
 - `head_position` (array-like of length 2): position of the head of the arrow (on the figure/axes)
 - `invert` (bool, default to False): whether to invert or not the angle of the arrow (only used if `radius`!=0)
 - `radius` (float, default to 0.1):
-- `tail_width` (float, default to 0.5): Width of the tail of the arrow
+- `tail_width` (float, default to 0.5): Width of the body of the arrow
 - `head_width` (float, default to 4): Head width of the tail of the arrow
 - `head_length` (float, default to 8): Head length of the tail of the arrow
-- `linewidth` (float, default to 0.5): Width of the body of the arrow
-- `color`: color of the arrow,
+- `linewidth` (float, default to 0.5): Width of the border of the arrow
+- `color`: color of the arrow
+- `edgecolor`: color of the border of the arrow
+- `facecolor`: color of the body of the arrow
+- and any `**kwargs` of the [FancyArrowPatch object](https://matplotlib.org/stable/api/_as_gen/matplotlib.patches.FancyArrowPatch.html)
 
 <br>
 
@@ -198,6 +201,7 @@ Contributions (and feedback) are welcome.
 
 TODO features:
 
+- add a `return_patch: bool` argument to specify whether the code should output the fancyarrowpatch object
 - draw arrow with an inflection point (see [this](https://python-graph-gallery.com/web-stacked-area-with-inflexion-arrows/))
 - ...
 
