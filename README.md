@@ -1,6 +1,6 @@
 # drawarrow
 
-<img src="https://github.com/JosephBARBIERDARNAL/drawarrow/blob/main/logo/logo.png?raw=true" alt="drawarrow logo" align="right" width="200px"/>
+<img src="https://github.com/JosephBARBIERDARNAL/drawarrow/blob/main/logo.png?raw=true" alt="drawarrow logo" align="right" width="200px"/>
 
 Drawing arrows for matplotlib made easy.
 
@@ -218,11 +218,5 @@ _Note: the following steps are for Mac, but not very different in other OS._
 - `pip install -e .`
 - `git checkout -b feature-name`
 - start coding!
-
-<br><br>
-
-# Acknowledgement
-
-Thanks [pizzadude](https://pizzadude.dk/) for the font used in the logo.
 
 <br><br><br>
