@@ -53,13 +53,13 @@ Check out [the online documentation](https://python-graph-gallery.com/drawarrow/
 
 Contributions (and feedback) are welcome.
 
-TODO features:
+### TODO features:
 
 - draw arrow with an inflection point (see [this](https://python-graph-gallery.com/web-stacked-area-with-inflexion-arrows/))
 - check the [issues](https://github.com/JosephBARBIERDARNAL/drawarrow/issues) for more ideas
 - suggest something (:
 
-#### Installation for contributions
+### Installation for contributions
 
 _Follow the steps below for your OS._
 
