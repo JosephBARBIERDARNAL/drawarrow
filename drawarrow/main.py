@@ -16,7 +16,7 @@ def _create_arrow(
     **FAPargs,
 ):
     """
-    Create a FancyArrowPatch object.
+    Creates a FancyArrowPatch object.
 
     Parameters:
     - `tail_position` (array-like of length 2): position of the tail of the arrow (on the figure/axes)
@@ -51,7 +51,7 @@ def fig_arrow(
     tail_position, head_position, fig: Figure | None = None, **kwargs
 ) -> None:
     """
-    Draw an arrow on a Matplotlib Figure using a FancyArrowPatch.
+    Draws an arrow on a Matplotlib Figure using a FancyArrowPatch.
 
     Parameters:
     - `tail_position` (array-like of length 2): position of the tail of the arrow (on the figure/axes)
@@ -59,7 +59,7 @@ def fig_arrow(
     - fig (Figure): The matplotlib figure to draw the arrow on.
 
     Returns:
-    - None
+    - FancyArrowPatch: The arrow patch object.
     """
     if fig is None:
         fig = plt.gcf()
@@ -68,10 +68,12 @@ def fig_arrow(
     arrow.set_transform(fig.transFigure)
     fig.patches.append(arrow)
 
+    return arrow
+
 
 def ax_arrow(tail_position, head_position, ax: Axes | None = None, **kwargs) -> None:
     """
-    Draw an arrow on a Matplotlib Axes using a FancyArrowPatch.
+    Draws an arrow on a Matplotlib Axes using a FancyArrowPatch.
 
     Parameters:
     - `tail_position` (array-like of length 2): position of the tail of the arrow (on the figure/axes)
@@ -86,3 +88,5 @@ def ax_arrow(tail_position, head_position, ax: Axes | None = None, **kwargs) -> 
 
     arrow = _create_arrow(tail_position, head_position, **kwargs)
     ax.add_patch(arrow)
+
+    return arrow

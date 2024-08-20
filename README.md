@@ -55,23 +55,50 @@ Contributions (and feedback) are welcome.
 
 TODO features:
 
-- add a `return_patch: bool` argument to specify whether the code should output the fancyarrowpatch object
 - draw arrow with an inflection point (see [this](https://python-graph-gallery.com/web-stacked-area-with-inflexion-arrows/))
 - check the [issues](https://github.com/JosephBARBIERDARNAL/drawarrow/issues) for more ideas
 - suggest something (:
 
 #### Installation for contributions
 
-_Note: the following steps are for Mac, but not very different in other OS._
+_Follow the steps below for your OS._
 
-- Fork this repo
-- `git clone https://github.com/yourusername/drawarrow.git`
-- `cd drawarrow`
-- `python -m venv venv`
-- `source venv/bin/activate`
-- `pip install -r requirements.txt`
-- `pip install -e .`
-- `git checkout -b feature-name`
-- start coding!
+1. **Fork the Repository:**
+   Fork this repository to your GitHub account.
+
+2. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/drawarrow.git
+   cd drawarrow
+   ```
+
+3. **Set Up a Virtual Environment:**
+
+   - **Mac/Linux:**
+     ```bash
+     python3 -m venv venv
+     source venv/bin/activate
+     ```
+   - **Windows:**
+     ```cmd
+     python -m venv venv
+     venv\Scripts\activate
+     ```
+
+4. **Install Dependencies:**
+
+   ```bash
+   pip install -r requirements.txt
+   pip install -e .
+   ```
+
+5. **Create a Feature Branch:**
+
+   ```bash
+   git checkout -b feature-name
+   ```
+
+6. **Start Coding!**
 
 <br><br><br>
