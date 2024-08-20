@@ -8,10 +8,8 @@
 
 import subprocess
 
-packages = ["matplotlib", "streamlit"]
-packages_app = packages + ["drawarrow"]
-REQUIREMENTS_FILE = "requirements-dev.txt"
-REQUIREMENTS_FILE_STREAMLIT = "requirements.txt"
+packages = ["matplotlib"]
+REQUIREMENTS_FILE = "requirements.txt"
 
 
 def get_package_version(package_name: str) -> str:
@@ -43,14 +41,3 @@ with open(REQUIREMENTS_FILE, "w") as file:
         else:
             print(f"Version not found for package {package}")
     print(f"{REQUIREMENTS_FILE} file updated\n\n")
-
-with open(REQUIREMENTS_FILE_STREAMLIT, "w") as file:
-    for package in packages_app:
-        version = get_package_version(package)
-        if version:
-            packageVersion = f"{package}=={version}"
-            print(packageVersion)
-            file.write(packageVersion + "\n")
-        else:
-            print(f"Version not found for package {package}")
-    print(f"{REQUIREMENTS_FILE_STREAMLIT} file updated\n\n")
