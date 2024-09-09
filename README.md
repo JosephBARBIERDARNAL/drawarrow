@@ -10,6 +10,8 @@ Check out [the online documentation](https://python-graph-gallery.com/drawarrow/
 
 # Installation
 
+_Note: drawarrow requires **Python 3.9** or above._
+
 You can install `drawarrow` directly from PyPI with:
 
 ```
