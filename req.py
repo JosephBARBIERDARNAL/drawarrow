@@ -1,11 +1,3 @@
-###############################################
-### HOW TO USE THIS SCRIPT
-### 1. Add new packages to the `packages` list.
-### 2. Run the script.
-### 3. The requirements.txt file is now updated.
-###############################################
-
-
 import subprocess
 
 packages = ["matplotlib"]

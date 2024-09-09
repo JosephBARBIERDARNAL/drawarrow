@@ -1,4 +1,4 @@
-sandbox.ipynb
+*.ipynb
 venv/
 __pycache__/
 drawarrow.egg-info/

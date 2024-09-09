@@ -77,7 +77,7 @@ _Follow the steps below for your OS._
 
    - **Mac/Linux:**
      ```bash
-     python3 -m venv venv
+     python -m venv venv
      source venv/bin/activate
      ```
    - **Windows:**
