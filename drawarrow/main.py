@@ -14,7 +14,6 @@ def _create_arrow(
     tail_width: float = 0.5,
     head_width: float = 4,
     head_length: float = 8,
-    head_style: str = "Simple",
     **FAPargs,
 ) -> FancyArrowPatch:
     """
@@ -40,7 +39,7 @@ def _create_arrow(
         )
 
     kw = dict(
-        arrowstyle=f"{head_style}, tail_width={tail_width}, head_width={head_width}, head_length={head_length}",
+        arrowstyle=f"Simple, tail_width={tail_width}, head_width={head_width}, head_length={head_length}",
         **FAPargs,
     )
     connectionstyle = f"arc3,rad={-radius if invert else radius}"
