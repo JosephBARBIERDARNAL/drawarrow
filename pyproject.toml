@@ -26,8 +26,6 @@ Homepage = "https://github.com/JosephBARBIERDARNAL/drawarrow"
 Issues = "https://github.com/JosephBARBIERDARNAL/drawarrow/issues"
 
 [tool.pytest.ini_options]
-minversion = "6.0"
-addopts = "-ra -q"
 testpaths = [
-  "tests",
+  "tests"
 ]
