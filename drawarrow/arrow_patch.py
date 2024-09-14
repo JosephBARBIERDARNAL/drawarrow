@@ -39,6 +39,7 @@ def _create_arrow(
         warnings.warn(
             "`invert` argument is ignored when radius is 0. Use `invert=False` to remove this warning."
         )
+    FAPargs["linewidth"] = tail_width
 
     if double_headed:
         if fill_head:
@@ -55,7 +56,6 @@ def _create_arrow(
         stylename=stylename, head_width=head_width, head_length=head_length
     )
 
-    FAPargs["linewidth"] = tail_width
     kw = dict(
         arrowstyle=arrowstyle,
         **FAPargs,
