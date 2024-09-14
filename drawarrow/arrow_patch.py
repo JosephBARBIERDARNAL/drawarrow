@@ -2,13 +2,16 @@
 Module with private functions for creating custom arrow patches using Matplotlib.
 """
 
-from matplotlib.patches import FancyArrowPatch, ArrowStyle
+from matplotlib.patches import FancyArrowPatch, ArrowStyle, ConnectionStyle
 import warnings
+
+from .utils import _calculate_angles
 
 
 def _create_arrow(
     tail_position,
     head_position,
+    inflection_position=None,
     double_headed: bool = False,
     fill_head: bool = True,
     invert: bool = False,
@@ -40,6 +43,7 @@ def _create_arrow(
             "`invert` argument is ignored when radius is 0. Use `invert=False` to remove this warning."
         )
     FAPargs["linewidth"] = tail_width
+    rad = -radius if invert else radius
 
     if double_headed:
         if fill_head:
@@ -51,16 +55,24 @@ def _create_arrow(
             stylename = "-|>"
         else:
             stylename = "->"
-
     arrowstyle = ArrowStyle(
         stylename=stylename, head_width=head_width, head_length=head_length
     )
 
-    kw = dict(
+    stylename = "arc3" if inflection_position is None else "angle"
+    connection_style_args = dict(stylename=stylename, rad=rad)
+    if inflection_position is not None:
+        angleA, angleB = _calculate_angles(
+            tail_position, inflection_position, head_position
+        )
+        connection_style_args["angleA"] = angleA
+        connection_style_args["angleB"] = angleB
+    connectionstyle = ConnectionStyle(**connection_style_args)
+
+    return FancyArrowPatch(
+        tail_position,
+        head_position,
+        connectionstyle=connectionstyle,
         arrowstyle=arrowstyle,
         **FAPargs,
-    )
-    connectionstyle = f"arc3,rad={-radius if invert else radius}"
-    return FancyArrowPatch(
-        tail_position, head_position, connectionstyle=connectionstyle, **kw
     )

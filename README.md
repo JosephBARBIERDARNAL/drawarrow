@@ -18,7 +18,7 @@ You can install `drawarrow` directly from PyPI with:
 pip install drawarrow
 ```
 
-Alternatively you can install the **development version** with:
+(not recommended) Alternatively you can install the **development version** with:
 
 ```
 pip install git+https://github.com/JosephBARBIERDARNAL/drawarrow.git
