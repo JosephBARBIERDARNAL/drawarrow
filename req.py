@@ -5,14 +5,6 @@ REQUIREMENTS_FILE = "requirements.txt"
 
 
 def get_package_version(package_name: str) -> str:
-    """
-    Get the version of a package using pip show.
-    Args:
-        package_name: Name of the package to get the version for.
-    Returns:
-        The version of the package.
-    """
-
     result = subprocess.run(
         ["pip", "show", package_name], capture_output=True, text=True
     )
@@ -32,4 +24,4 @@ with open(REQUIREMENTS_FILE, "w") as file:
             file.write(packageVersion + "\n")
         else:
             print(f"Version not found for package {package}")
-    print(f"{REQUIREMENTS_FILE} file updated\n\n")
+    print(f"\n{REQUIREMENTS_FILE} file updated")

@@ -24,8 +24,3 @@ build-backend = "setuptools.build_meta"
 [project.urls]
 Homepage = "https://github.com/JosephBARBIERDARNAL/drawarrow"
 Issues = "https://github.com/JosephBARBIERDARNAL/drawarrow/issues"
-
-[tool.pytest.ini_options]
-testpaths = [
-  "tests"
-]
