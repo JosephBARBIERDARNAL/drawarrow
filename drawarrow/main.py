@@ -14,8 +14,8 @@ def fig_arrow(
     Draws an arrow on a Matplotlib Figure using a FancyArrowPatch.
 
     Parameters:
-    - `tail_position` (array-like of length 2): position of the tail of the arrow (on the figure/axes)
-    - `head_position` (array-like of length 2): position of the head of the arrow (on the figure/axes)
+    - tail_position (array-like of length 2): position of the tail of the arrow (on the figure/axes)
+    - head_position (array-like of length 2): position of the head of the arrow (on the figure/axes)
     - fig (Figure): The matplotlib figure to draw the arrow on.
 
     Returns:
@@ -38,8 +38,8 @@ def ax_arrow(
     Draws an arrow on a Matplotlib Axes using a FancyArrowPatch.
 
     Parameters:
-    - `tail_position` (array-like of length 2): position of the tail of the arrow (on the figure/axes)
-    - `head_position` (array-like of length 2): position of the head of the arrow (on the figure/axes)
+    - tail_position (array-like of length 2): position of the tail of the arrow (on the figure/axes)
+    - head_position (array-like of length 2): position of the head of the arrow (on the figure/axes)
     - ax (Axes): The matplotlib axes to draw the arrow on. If None, uses the current axes.
 
     Returns:

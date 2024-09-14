@@ -8,10 +8,10 @@ description = "Drawing arrows for matplotlib made easy."
 readme = "README.md"
 requires-python = ">=3.9"
 classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-    "Framework :: Matplotlib"
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Framework :: Matplotlib"
 ]
 dependencies = [
   "matplotlib"
@@ -24,3 +24,10 @@ build-backend = "setuptools.build_meta"
 [project.urls]
 Homepage = "https://github.com/JosephBARBIERDARNAL/drawarrow"
 Issues = "https://github.com/JosephBARBIERDARNAL/drawarrow/issues"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+  "tests",
+]

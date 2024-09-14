@@ -5,7 +5,7 @@ Module with private functions for creating custom arrow patches using Matplotlib
 from matplotlib.patches import FancyArrowPatch, ArrowStyle, ConnectionStyle
 import warnings
 
-from .utils import _calculate_angles
+from .utils import _angles_from_positions
 
 
 def _create_arrow(
@@ -15,7 +15,7 @@ def _create_arrow(
     double_headed: bool = False,
     fill_head: bool = True,
     invert: bool = False,
-    radius: float = 0.1,
+    radius: float = 0,
     tail_width: float = 1,
     head_width: float = 4,
     head_length: float = 8,
@@ -28,7 +28,8 @@ def _create_arrow(
     - `tail_position` (array-like of length 2): position of the tail of the arrow (on the figure/axes)
     - `head_position` (array-like of length 2): position of the head of the arrow (on the figure/axes)
     - `invert` (bool, default to False): whether to invert or not the angle of the arrow (only used if `radius`!=0)
-    - `radius` (float, default to 0.1):
+    - `radius` (float, default to 0): Rounding radius of the edge. If `inflection_position` is not None, then
+    it's the rounding radius at the inflection point.
     - `tail_width` (float, default to 1): Width of the tail of the arrow
     - `head_width` (float, default to 4): Head width of the tail of the arrow
     - `head_length` (float, default to 8): Head length of the tail of the arrow
@@ -59,10 +60,18 @@ def _create_arrow(
         stylename=stylename, head_width=head_width, head_length=head_length
     )
 
-    stylename = "arc3" if inflection_position is None else "angle"
+    if inflection_position is None:
+        stylename = "arc3"
+    else:
+        stylename = "angle"
+        # For some reason, this type of connection style requires
+        # a much larger radius to be sufficiently visible.
+        # I don't know why, but multiplying it by 100 seems to
+        # solve the problem.
+        rad = rad * 100
     connection_style_args = dict(stylename=stylename, rad=rad)
     if inflection_position is not None:
-        angleA, angleB = _calculate_angles(
+        angleA, angleB = _angles_from_positions(
             tail_position, inflection_position, head_position
         )
         connection_style_args["angleA"] = angleA
