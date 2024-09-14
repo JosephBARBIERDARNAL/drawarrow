@@ -5,7 +5,7 @@ from matplotlib.figure import Figure
 from matplotlib.axes import Axes
 import numpy as np
 from drawarrow import fig_arrow, ax_arrow
-from drawarrow.main import _create_arrow
+from drawarrow.arrow_patch import _create_arrow
 
 
 def test_create_arrow():

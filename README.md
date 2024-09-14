@@ -59,11 +59,13 @@ Contributions (and feedback) are welcome.
 
 - draw arrow with an inflection point (see [this](https://python-graph-gallery.com/web-stacked-area-with-inflexion-arrows/))
 - check the [issues](https://github.com/JosephBARBIERDARNAL/drawarrow/issues) for more ideas
-- suggest something (:
+- suggest something
 
 ### Installation for contributions
 
-_Follow the steps below for your OS._
+_Note: drawarrow requires **Python 3.9** or above._
+
+Follow the steps below for your OS.
 
 1. **Fork the Repository:**
    Fork this repository to your GitHub account.
