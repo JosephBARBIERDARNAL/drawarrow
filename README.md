@@ -2,7 +2,11 @@
 
 <img src="https://github.com/JosephBARBIERDARNAL/static/blob/main/python-libs/drawarrow/image.png?raw=true" alt="drawarrow logo" align="right" width="200px"/>
 
-Drawing arrows for matplotlib made easy.
+Drawing arrows for `matplotlib` made easy.
+
+<img src="overview.png" align="left" width="400px"/>
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
 
 Check out [the online documentation](https://python-graph-gallery.com/drawarrow/).
 
@@ -18,12 +22,6 @@ You can install `drawarrow` directly from PyPI with:
 pip install drawarrow
 ```
 
-(not recommended) Alternatively you can install the **development version** with:
-
-```
-pip install git+https://github.com/JosephBARBIERDARNAL/drawarrow.git
-```
-
 <br><br>
 
 # Quick Start
@@ -36,7 +34,7 @@ fig, ax = plt.subplots()
 
 ax.scatter(x=[1, 2, 3, 4, 5], y=[1, 2, 3, 4, 5], s=100)
 
-fig_arrow(head_position=(0.5, 0.5), tail_position=(0.2, 0.7), radius=0.1, color="red")
+fig_arrow(head_position=(0.5, 0.5), tail_position=(0.2, 0.7), radius=0.2, color="red")
 
 plt.show()
 ```
@@ -57,9 +55,7 @@ Contributions (and feedback) are welcome.
 
 ### TODO features:
 
-- draw arrow with an inflection point (see [this](https://python-graph-gallery.com/web-stacked-area-with-inflexion-arrows/))
-- check the [issues](https://github.com/JosephBARBIERDARNAL/drawarrow/issues) for more ideas
-- suggest something
+There's not much that needs to be implemented at the moment. If you've found a bug or want to request a new feature, open an [issue](https://github.com/JosephBARBIERDARNAL/drawarrow/issues).
 
 ### Installation for contributions
 

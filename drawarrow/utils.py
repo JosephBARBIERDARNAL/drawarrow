@@ -1,8 +1,60 @@
 """
-Module containing utility functions for calculating angles between positions.
+Module containing utility functions for:
+
+- finding the valid stylename when defining the `matplotlib.patches.ArrowStyle`
+and `matplotlib.patches.ConnectionStyle` for the `matplotlib.patches.FancyArrowPatch`.
+- calculating angles between positions for arrows with an inflection point.
 """
 
 import math
+
+
+def _find_stylename_arrowstyle(double_headed: bool, fill_head: bool):
+    """
+    Finds the valid stylename when defining the `matplotlib.patches.ArrowStyle`
+    for the `matplotlib.patches.FancyArrowPatch`.
+
+    Parameters:
+    - double_headed (bool): If True, the arrow will have two heads.
+    - fill_head (bool): If True, the arrow head will be filled.
+
+    Returns:
+    - str: The valid stylename for the arrow style.
+    """
+    if double_headed:
+        if fill_head:
+            stylename = "<|-|>"
+        else:
+            stylename = "<->"
+    else:
+        if fill_head:
+            stylename = "-|>"
+        else:
+            stylename = "->"
+    return stylename
+
+
+def _find_stylename_connectionstyle(inflection_position, rad):
+    """
+    Determines the stylename and adjusts the radius for the connection style based on the inflection position.
+
+    Parameters:
+    - inflection_position (None or any): The position of the inflection point. If None, it indicates no inflection point.
+    - rad (float): The initial radius for the connection style.
+
+    Returns:
+    - tuple: A tuple containing the stylename and the adjusted radius for the connection style.
+    """
+    if inflection_position is None:
+        stylename = "arc3"
+    else:
+        stylename = "angle"
+        # For some reason, this type of connection style requires
+        # a much larger radius to be sufficiently visible.
+        # I don't know why, but multiplying it by 100 seems to
+        # solve the problem.
+        rad = rad * 100
+    return stylename, rad
 
 
 def _magnitude(v):

@@ -1,6 +1,6 @@
 import subprocess
 
-packages = ["matplotlib"]
+packages = ["matplotlib", "pytest"]
 REQUIREMENTS_FILE = "requirements.txt"
 
 

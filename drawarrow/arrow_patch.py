@@ -1,11 +1,15 @@
 """
-Module with private functions for creating custom arrow patches using Matplotlib.
+Module with the main (private) function for creating custom arrow patches using Matplotlib.
 """
 
 from matplotlib.patches import FancyArrowPatch, ArrowStyle, ConnectionStyle
 import warnings
 
-from .utils import _angles_from_positions
+from .utils import (
+    _angles_from_positions,
+    _find_stylename_arrowstyle,
+    _find_stylename_connectionstyle,
+)
 
 
 def _create_arrow(
@@ -22,18 +26,21 @@ def _create_arrow(
     **FAPargs,
 ) -> FancyArrowPatch:
     """
-    Creates a FancyArrowPatch object.
+    Creates a FancyArrowPatch object with customized connection and arrow style.
 
     Parameters:
-    - `tail_position` (array-like of length 2): position of the tail of the arrow (on the figure/axes)
-    - `head_position` (array-like of length 2): position of the head of the arrow (on the figure/axes)
-    - `invert` (bool, default to False): whether to invert or not the angle of the arrow (only used if `radius`!=0)
-    - `radius` (float, default to 0): Rounding radius of the edge. If `inflection_position` is not None, then
+    - tail_position (array-like of length 2): Position of the tail of the arrow (on the figure/axes)
+    - head_position (array-like of length 2): Position of the head of the arrow (on the figure/axes)
+    - inflection_position (array-like of length 2): Optional position of the inflection point (on the figure/axes)
+    - double_headed (bool): Whether the arrow has two heads or not.
+    - fill_head (bool): Whether the arrowhead is filled or not.
+    - invert (bool): Whether to invert or not the angle of the arrow (only used if `radius`!=0)
+    - radius (float): Rounding radius of the edge. If `inflection_position` is not None, then
     it's the rounding radius at the inflection point.
-    - `tail_width` (float, default to 1): Width of the tail of the arrow
-    - `head_width` (float, default to 4): Head width of the tail of the arrow
-    - `head_length` (float, default to 8): Head length of the tail of the arrow
-    - `FAPargs`: FancyArrowPatch additional arguments (color, zorder, alpha...)
+    - tail_width (float): Width of the tail of the arrow
+    - head_width (float): Head width of the tail of the arrow
+    - head_length (float): Head length of the tail of the arrow
+    - **FAPargs: FancyArrowPatch additional arguments (color, zorder, alpha...)
 
     Returns:
     - FancyArrowPatch: The arrow patch object.
@@ -41,42 +48,25 @@ def _create_arrow(
 
     if invert and radius == 0:
         warnings.warn(
-            "`invert` argument is ignored when radius is 0. Use `invert=False` to remove this warning."
+            "`invert` argument is ignored when radius is 0. Delete `invert=True` to remove this warning."
         )
     FAPargs["linewidth"] = tail_width
     rad = -radius if invert else radius
 
-    if double_headed:
-        if fill_head:
-            stylename = "<|-|>"
-        else:
-            stylename = "<->"
-    else:
-        if fill_head:
-            stylename = "-|>"
-        else:
-            stylename = "->"
+    stylename = _find_stylename_arrowstyle(double_headed, fill_head)
     arrowstyle = ArrowStyle(
         stylename=stylename, head_width=head_width, head_length=head_length
     )
 
-    if inflection_position is None:
-        stylename = "arc3"
-    else:
-        stylename = "angle"
-        # For some reason, this type of connection style requires
-        # a much larger radius to be sufficiently visible.
-        # I don't know why, but multiplying it by 100 seems to
-        # solve the problem.
-        rad = rad * 100
-    connection_style_args = dict(stylename=stylename, rad=rad)
+    stylename, rad = _find_stylename_connectionstyle(inflection_position, rad)
+    connectionstyle_args = dict(stylename=stylename, rad=rad)
     if inflection_position is not None:
         angleA, angleB = _angles_from_positions(
             tail_position, inflection_position, head_position
         )
-        connection_style_args["angleA"] = angleA
-        connection_style_args["angleB"] = angleB
-    connectionstyle = ConnectionStyle(**connection_style_args)
+        connectionstyle_args["angleA"] = angleA
+        connectionstyle_args["angleB"] = angleB
+    connectionstyle = ConnectionStyle(**connectionstyle_args)
 
     return FancyArrowPatch(
         tail_position,
