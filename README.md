@@ -4,10 +4,6 @@
 
 Drawing arrows for `matplotlib` made easy.
 
-<img src="overview.png" align="left" width="400px"/>
-
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
 Check out [the online documentation](https://python-graph-gallery.com/drawarrow/).
 
 <br><br>
@@ -46,6 +42,10 @@ plt.show()
 # Usage guide
 
 Check out [the online documentation](https://python-graph-gallery.com/drawarrow/).
+
+Features overview:
+
+![](overview.png)
 
 <br><br>
 

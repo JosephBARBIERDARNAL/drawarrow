@@ -22,6 +22,13 @@ def test_create_arrow_invert_warning():
         _create_arrow(tail, head, invert=True, radius=0)
 
 
+def test_create_arrow_linewidth_warning():
+    tail = (0, 0)
+    head = (1, 1)
+    with pytest.warns(UserWarning):
+        _create_arrow(tail, head, linewidth=1.2)
+
+
 def test_fig_arrow():
     fig = plt.figure()
     tail = (0.1, 0.1)

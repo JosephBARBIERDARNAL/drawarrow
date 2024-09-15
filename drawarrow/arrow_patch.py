@@ -20,7 +20,7 @@ def _create_arrow(
     fill_head: bool = True,
     invert: bool = False,
     radius: float = 0,
-    tail_width: float = 1,
+    width: float = 1,
     head_width: float = 4,
     head_length: float = 8,
     **FAPargs,
@@ -37,7 +37,7 @@ def _create_arrow(
     - invert (bool): Whether to invert or not the angle of the arrow (only used if `radius`!=0)
     - radius (float): Rounding radius of the edge. If `inflection_position` is not None, then
     it's the rounding radius at the inflection point.
-    - tail_width (float): Width of the tail of the arrow
+    - width (float): Width of the tail of the arrow
     - head_width (float): Head width of the tail of the arrow
     - head_length (float): Head length of the tail of the arrow
     - **FAPargs: FancyArrowPatch additional arguments (color, zorder, alpha...)
@@ -48,15 +48,24 @@ def _create_arrow(
 
     if invert and radius == 0:
         warnings.warn(
-            "`invert` argument is ignored when radius is 0. Delete `invert=True` to remove this warning."
+            "`invert` argument is ignored when radius is 0. "
+            "Delete `invert=True` to remove this warning."
         )
-    FAPargs["linewidth"] = tail_width
+
     rad = -radius if invert else radius
 
+    if "linewidth" in FAPargs.keys():
+        warnings.warn(
+            "The `linewidth` property is overwritten by the `width` property. "
+            "Please use `width` instead."
+        )
+    FAPargs["linewidth"] = width
+
     stylename = _find_stylename_arrowstyle(double_headed, fill_head)
-    arrowstyle = ArrowStyle(
+    arrowstyle_args = dict(
         stylename=stylename, head_width=head_width, head_length=head_length
     )
+    arrowstyle = ArrowStyle(**arrowstyle_args)
 
     stylename, rad = _find_stylename_connectionstyle(inflection_position, rad)
     connectionstyle_args = dict(stylename=stylename, rad=rad)

@@ -1,7 +1,9 @@
 *.ipynb
 !tests/*.ipynb
-venv/
+
 __pycache__/
+.pytest_cache/
+
+venv/
 drawarrow.egg-info/
 dist/
-temp_logo.png
