@@ -30,7 +30,15 @@ fig, ax = plt.subplots()
 
 ax.scatter(x=[1, 2, 3, 4, 5], y=[1, 2, 3, 4, 5], s=100)
 
-fig_arrow(head_position=(0.5, 0.5), tail_position=(0.2, 0.7), radius=0.2, color="red")
+fig_arrow(
+    head_position=(0.5, 0.5),
+    tail_position=(0.2, 0.7),
+    width=2,
+    radius=0.3,
+    color="darkred",
+    fill_head=False,
+    mutation_scale=2,
+)
 
 plt.show()
 ```
