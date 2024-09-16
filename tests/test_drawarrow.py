@@ -5,7 +5,7 @@ from matplotlib.figure import Figure
 from matplotlib.axes import Axes
 import numpy as np
 from drawarrow import fig_arrow, ax_arrow
-from drawarrow.main import _create_arrow
+from drawarrow.arrow_patch import _create_arrow
 
 
 def test_create_arrow():
@@ -20,6 +20,13 @@ def test_create_arrow_invert_warning():
     head = (1, 1)
     with pytest.warns(UserWarning):
         _create_arrow(tail, head, invert=True, radius=0)
+
+
+def test_create_arrow_linewidth_warning():
+    tail = (0, 0)
+    head = (1, 1)
+    with pytest.warns(UserWarning):
+        _create_arrow(tail, head, linewidth=1.2)
 
 
 def test_fig_arrow():

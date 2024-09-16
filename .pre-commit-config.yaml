@@ -43,6 +43,23 @@ repos:
     hooks:
       - id: codespell
         args: ["-w", "-L", "ist,cant,connexion,multline,checkin"]
+
+  - repo: local
+    hooks:
+      - id: custom-script
+        name: Verify requirements file
+        entry: python req.py
+        language: system
+        types: [python]
+
+  - repo: local
+    hooks:
+      - id: tests
+        name: Run tests
+        entry: pytest tests/
+        language: system
+        types: [python]
+
 ci:
   autofix_prs: false
   autofix_commit_msg: "[pre-commit.ci 🤖] Apply code format tools to PR"
