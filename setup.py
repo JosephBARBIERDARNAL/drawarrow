@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="drawarrow",
-    version="0.0.2",
+    version="0.0.3",
     packages=find_packages(),
     description="Drawing arrows for matplotlib made easy.",
     long_description=open("README.md").read(),

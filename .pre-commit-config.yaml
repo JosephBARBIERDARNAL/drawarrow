@@ -52,14 +52,6 @@ repos:
         language: system
         types: [python]
 
-  - repo: local
-    hooks:
-      - id: tests
-        name: Run tests
-        entry: pytest tests/
-        language: system
-        types: [python]
-
 ci:
   autofix_prs: false
   autofix_commit_msg: "[pre-commit.ci 🤖] Apply code format tools to PR"
