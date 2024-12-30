@@ -1,3 +1,7 @@
+> DrawArrow is supported by [Matplotlib Journey](https://www.matplotlib-journey.com/), an interactive online course designed to make you a master of Matplotlib. If you want to **support DrawArrow** and **become a Matplotlib expert**, consider purchasing the course!
+
+<br><br>
+
 # drawarrow
 
 <img src="https://github.com/JosephBARBIERDARNAL/static/blob/main/python-libs/drawarrow/image.png?raw=true" alt="drawarrow logo" align="right" width="200px"/>
