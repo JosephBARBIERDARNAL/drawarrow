@@ -12,11 +12,7 @@ Check out [the online documentation](https://python-graph-gallery.com/drawarrow/
 
 <br><br>
 
-# Installation
-
-_Note: drawarrow requires **Python 3.9** or above._
-
-You can install `drawarrow` directly from PyPI with:
+## Installation
 
 ```
 pip install drawarrow
@@ -24,7 +20,7 @@ pip install drawarrow
 
 <br><br>
 
-# Quick Start
+## Quick Start
 
 ```python
 import matplotlib.pyplot as plt
@@ -51,20 +47,8 @@ plt.show()
 
 <br><br>
 
-# Usage guide
+## Next steps
 
-Check out [the online documentation](https://python-graph-gallery.com/drawarrow/).
-
-Features overview:
-
-![](overview.png)
-
-<br><br>
-
-# Contributions
-
-Contributions (and feedback) are welcome.
-
-There's not much that needs to be implemented at the moment. If you've found a bug or want to request a new feature, open an [issue](https://github.com/JosephBARBIERDARNAL/drawarrow/issues).
+You can have a look at this [tutorial](https://python-graph-gallery.com/drawarrow/) or see the [reference](reference/ax_arrow/).
 
 <br><br><br>

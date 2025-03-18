@@ -1,20 +1,31 @@
 [project]
 name = "drawarrow"
-version = "0.0.3"
+version = "0.1.0"
+description = "Drawing arrows for matplotlib made easy."
 authors = [
   { name="Joseph Barbier", email="joseph.barbierdarnal@gmail.com" },
 ]
-description = "Drawing arrows for matplotlib made easy."
-readme = "README.md"
-requires-python = ">=3.9"
 classifiers = [
   "Programming Language :: Python :: 3",
   "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
   "Framework :: Matplotlib"
 ]
+readme = "README.md"
+requires-python = ">=3.9"
 dependencies = [
-  "matplotlib"
+    "matplotlib",
+]
+
+[dependency-groups]
+dev = [
+    "mkdocs-material>=9.6.9",
+    "mkdocs-matplotlib>=0.10.1",
+    "mkdocstrings-python>=1.16.5",
+    "pre-commit>=4.1.0",
+    "pytest>=8.3.5",
+    "ruff>=0.11.0",
+    "setuptools>=76.1.0",
 ]
 
 [build-system]
