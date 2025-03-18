@@ -8,7 +8,7 @@ from drawarrow import arrow_spines
 @pytest.fixture
 def mock_ax_arrow():
     """Fixture to mock the ax_arrow function for testing."""
-    with patch("drawarrow.arrow_spines.ax_arrow") as mock:
+    with patch("drawarrow.main.ax_arrow") as mock:
         yield mock
 
 
