@@ -8,3 +8,4 @@ drawarrow.egg-info/
 dist/
 
 *cache*
+site/
