@@ -46,7 +46,7 @@ fig_arrow(
 plt.show()
 ```
 
-![](https://github.com/JosephBARBIERDARNAL/drawarrow/blob/main/quick-start.png?raw=true)
+![](https://github.com/JosephBARBIERDARNAL/drawarrow/blob/main/img/quick-start.png?raw=true)
 
 <br><br>
 
@@ -60,7 +60,7 @@ You can have a look at this [tutorial](https://python-graph-gallery.com/drawarro
 
 `drawarrow` is supported by [Matplotlib Journey](https://www.matplotlib-journey.com/), an interactive online course designed to make you a master of Matplotlib. If you want to **support `drawarrow`** and **become a Matplotlib expert**, consider purchasing the course!
 
-<center >
+<center>
 
 ### [**Start learning**](https://www.matplotlib-journey.com/)
 
