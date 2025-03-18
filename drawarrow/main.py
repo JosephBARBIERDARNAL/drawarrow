@@ -26,7 +26,7 @@ def fig_arrow(
     """
     Draw an arrow on a Matplotlib figure using a `FancyArrowPatch`. The coordinate system used is that of a Matplotlib Figure (from 0 to 1).
 
-    This function is very similar to what `ax_arrow()` does: only the change of coordinate system and the `fig/ax` arguments. You can find out more about how coordinate systems work in Matplotlib [here](https://python-graph-gallery.com/589-how-to-change-coordinate-system/).
+    This function is very similar to what [`ax_arrow()`](ax_arrow.md) does: only the change of coordinate system and the `fig/ax` arguments. You can find out more about how coordinate systems work in Matplotlib [here](https://python-graph-gallery.com/589-how-to-change-coordinate-system/).
 
     Parameters
 
@@ -111,7 +111,7 @@ def ax_arrow(
     """
     Draw an arrow on a Matplotlib axes using a `FancyArrowPatch`. The coordinate system used is that of a Matplotlib axes (data coordinates).
 
-    This function is very similar to what `fig_arrow()` does: only the change of coordinate system and the `fig/ax` arguments. You can find out more about how coordinate systems work in Matplotlib [here](https://python-graph-gallery.com/589-how-to-change-coordinate-system/).
+    This function is very similar to what [`fig_arrow()`](fig_arrow.md) does: only the change of coordinate system and the `fig/ax` arguments. You can find out more about how coordinate systems work in Matplotlib [here](https://python-graph-gallery.com/589-how-to-change-coordinate-system/).
 
     Parameters
 

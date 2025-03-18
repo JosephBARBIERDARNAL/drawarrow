@@ -43,7 +43,7 @@ fig_arrow(
 plt.show()
 ```
 
-![](https://github.com/JosephBARBIERDARNAL/drawarrow/blob/main/quick-start.png?raw=true)
+![](https://github.com/JosephBARBIERDARNAL/drawarrow/blob/main/img/quick-start.png?raw=true)
 
 <br><br>
 

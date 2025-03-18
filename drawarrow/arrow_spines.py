@@ -9,7 +9,7 @@ def arrow_spines(ax=None, **arrow_style):
     Parameters:
 
     - `ax`: The matplotlib axes to draw the arrow on. If None, uses the current axes
-    - `arrow_style`: any additional arguments passed to `ax_arrow`
+    - `arrow_style`: any additional arguments passed to [`ax_arrow()`](ax_arrow.md)
     """
     if ax is None:
         ax = plt.gca()
