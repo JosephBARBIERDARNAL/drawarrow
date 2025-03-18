@@ -103,7 +103,7 @@ def _angles_from_positions(pos_A, pos_B, pos_C):
         raise ValueError(invalid_inputs_msg)
     cos_theta = max(-1, min(1, cos_theta))
 
-    angle_between_AB_BC = math.degrees(math.acos(cos_theta))
+    _ = math.degrees(math.acos(cos_theta))
 
     angleA = _angle_with_x_axis(AB)
     angleB = _angle_with_x_axis(BC)

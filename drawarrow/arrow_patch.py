@@ -54,7 +54,7 @@ def _create_arrow(
 
     rad = -radius if invert else radius
 
-    if "linewidth" in FAPargs.keys():
+    if "linewidth" in FAPargs.keys() or "lw" in FAPargs.keys():
         warnings.warn(
             "The `linewidth` property is overwritten by the `width` property. "
             "Please use `width` instead."
