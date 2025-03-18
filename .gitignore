@@ -6,3 +6,5 @@ __pycache__/
 venv/
 drawarrow.egg-info/
 dist/
+
+*cache*

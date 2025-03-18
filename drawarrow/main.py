@@ -28,7 +28,7 @@ def fig_arrow(
 
     This function is very similar to what `ax_arrow()` does: only the change of coordinate system and the `fig/ax` arguments. You can find out more about how coordinate systems work in Matplotlib [here](https://python-graph-gallery.com/589-how-to-change-coordinate-system/).
 
-    Parameters:
+    Parameters
 
     - `tail_position`: Position of the tail of the arrow
     - `head_position`: Position of the head of the arrow
@@ -49,11 +49,11 @@ def fig_arrow(
         - `alpha`: the opacity of the shadow
     - `kwargs`: any additional arguments passed to `matplotlib.patches.FancyArrowPatch`
 
-    Returns:
+    Returns
 
     - `FancyArrowPatch`: The arrow patch object
 
-    Usage:
+    Usage
 
     ```python
     import matplotlib.pyplot as plt
@@ -113,7 +113,7 @@ def ax_arrow(
 
     This function is very similar to what `fig_arrow()` does: only the change of coordinate system and the `fig/ax` arguments. You can find out more about how coordinate systems work in Matplotlib [here](https://python-graph-gallery.com/589-how-to-change-coordinate-system/).
 
-    Parameters:
+    Parameters
 
     - `tail_position`: Position of the tail of the arrow
     - `head_position`: Position of the head of the arrow
@@ -133,11 +133,11 @@ def ax_arrow(
         - `alpha`: the opacity of the shadow
     - `kwargs`: any additional arguments passed to `matplotlib.patches.FancyArrowPatch`
 
-    Returns:
+    Returns
 
     - `FancyArrowPatch`: The arrow patch object
 
-    Usage:
+    Usage
 
     ```python
     import matplotlib.pyplot as plt

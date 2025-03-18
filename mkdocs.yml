@@ -18,6 +18,7 @@ nav:
   - Reference:
       - reference/ax_arrow.md
       - reference/fig_arrow.md
+      - reference/arrow_spines.md
   - FAQ: FAQ.md
 
 plugins:
