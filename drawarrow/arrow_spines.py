@@ -11,14 +11,33 @@ def arrow_spines(
     top=None,
     ax: Union[Axes, None] = None,
     **arrow_style,
-):
+) -> Axes:
     """
-    Remove spines in a matplotlib Axes and add arrows (left to right and bottom to top) instead.
+    Replace matplotlib spines with arrows instead. By default it adds an arrow at the bottom spine (to the right) and an arrow at the left spine (to the top), but it can customized. See examples below.
 
     Parameters:
 
+    - `bottom`: direction of the arrow (either 'toright' or 'toleft'). No arrow if `None`
+    - `top`: direction of the arrow (either 'toright' or 'toleft'). No arrow if `None` (default)
+    - `left`: direction of the arrow (either 'totop' or 'tobottom'). No arrow if `None`
+    - `right`: direction of the arrow (either 'totop' or 'tobottom'). No arrow if `None` (default)
     - `ax`: The matplotlib axes to draw the arrow on. If None, uses the current axes
     - `arrow_style`: any additional arguments passed to [`ax_arrow()`](ax_arrow.md)
+
+    Returns:
+
+    - `Axes`: the matplotlib axes
+
+    Usage
+
+    ```python
+    import matplotlib.pyplot as plt
+    from drawarrow import arrow_spines
+
+    fig, ax = plt.subplots()
+    arrow_spines(ax=ax, color="red")
+    plt.show()
+    ```
     """
     if ax is None:
         ax = plt.gca()
@@ -83,16 +102,11 @@ def arrow_spines(
                 f"right must be one of: 'totop', 'tobottom', None, not '{right}'"
             )
 
+    return ax
+
 
 if __name__ == "__main__":
     fig, ax = plt.subplots()
     ax.scatter([1, 2, 3, 8, 6, 10], [2, 5, 3, 9, 2, 10])
-    arrow_spines(
-        right=None,
-        bottom=None,
-        left="totop",
-        top=None,
-        ax=ax,
-        color="red",
-    )
+    arrow_spines(ax=ax, color="red")
     fig.savefig("cache.png", dpi=300)
