@@ -1,5 +1,7 @@
 # `drawarrow`
 
+<img src="https://github.com/JosephBARBIERDARNAL/static/blob/main/python-libs/drawarrow/image.png?raw=true" alt="drawarrow logo" align="right" width="150px"/>
+
 `drawarrow` is a Python package that simplifies (a lot) the process of creating and customising arrows in Matplotlib.
 
 It provides everything you need to create **any** arrow you can imagine:
@@ -13,13 +15,7 @@ It provides everything you need to create **any** arrow you can imagine:
 
 [View examples](https://python-graph-gallery.com/drawarrow/)
 
-<br>
 
-## Installation
-
-```
-pip install drawarrow
-```
 
 <br><br>
 
@@ -50,20 +46,18 @@ plt.show()
 
 <br><br>
 
-## Next steps
 
-You can have a look at this [tutorial](https://python-graph-gallery.com/drawarrow/) or see the [reference](reference/ax_arrow.md).
+## Installation
+
+```
+pip install drawarrow
+```
 
 <br><br>
 
-## Learn matplotlib
+## Next steps
 
-`drawarrow` is supported by [Matplotlib Journey](https://www.matplotlib-journey.com/), an interactive online course designed to make you a master of Matplotlib. If you want to **support `drawarrow`** and **become a Matplotlib expert**, consider purchasing the course!
+You can have a look at this [tutorial](https://python-graph-gallery.com/drawarrow/) or see the [examples](reference/ax_arrow.md).
 
-<center>
-
-### [**Start learning**](https://www.matplotlib-journey.com/)
-
-</center>
 
 <br><br>

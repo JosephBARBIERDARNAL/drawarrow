@@ -3,6 +3,7 @@ site_url: https://josephbarbierdarnal.github.io/drawarrow/
 repo_url: https://github.com/JosephBARBIERDARNAL/drawarrow
 theme:
   name: material
+  custom_dir: overrides
   features:
     - content.code.copy
     - content.tabs.link
@@ -17,6 +18,9 @@ extra:
   analytics:
     provider: google
     property: G-XSWTDJP3CD
+
+extra_css:
+  - stylesheets/style.css
 
 nav:
   - Home: index.md
