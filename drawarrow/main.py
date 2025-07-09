@@ -46,7 +46,7 @@ def fig_arrow(
         fig: matplotlib figure to draw the arrow on. If it is not supplied, it will use `matplotlib.pyplot.gcf()`.
         shadow_style: dictionary with arguments passed to `matplotlib.patheffects.SimpleLineShadow`. The main
         useful arguments are:
-            offset: the offset between the arrow and its shadow
+            offset: the offset between the arrow and its shadow (x, y)
             shadow_color: the color of the shadow
             alpha: the opacity of the shadow
         kwargs: any additional arguments passed to `matplotlib.patches.FancyArrowPatch`
@@ -120,7 +120,7 @@ def ax_arrow(
         head_length: Head length of the tail of the arrow
         ax: The matplotlib axes to draw the arrow on. If None, uses the current axes
         shadow_style: dictionary with arguments passed to `matplotlib.patheffects.SimpleLineShadow`:
-            offset: the offset between the arrow and its shadow
+            offset: the offset between the arrow and its shadow (x, y)
             shadow_color: the color of the shadow
             alpha: the opacity of the shadow
         kwargs: any additional arguments passed to `matplotlib.patches.FancyArrowPatch`

@@ -11,3 +11,4 @@ dist/
 site/
 uv.lock
 .venv/
+sandbox.*
