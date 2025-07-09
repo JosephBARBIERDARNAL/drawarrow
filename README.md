@@ -1,10 +1,13 @@
 # drawarrow
 
-<img src="https://github.com/JosephBARBIERDARNAL/static/blob/main/python-libs/drawarrow/image.png?raw=true" alt="drawarrow logo" align="right" width="200px"/>
+<img src="https://github.com/JosephBARBIERDARNAL/static/blob/main/python-libs/drawarrow/image.png?raw=true" alt="drawarrow logo" align="right" width="180px"/>
 
 Drawing arrows for `matplotlib` made easy.
 
 Check out [the online documentation](https://python-graph-gallery.com/drawarrow/).
+
+![PyPI - Downloads](https://img.shields.io/pypi/dm/drawarrow.png)
+![](coverage-badge.svg)
 
 <br><br>
 

@@ -9,3 +9,6 @@ dist/
 
 *cache*
 site/
+uv.lock
+.venv/
+sandbox.*
