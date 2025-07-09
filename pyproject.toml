@@ -43,6 +43,10 @@ packages = ["drawarrow"]
 [tool.uv.sources]
 drawarrow = { workspace = true }
 
+[tool.ty.src]
+include = ["drawarrow"]
+exclude = ["tests", "sandbox.py", "docs"]
+
 [project.urls]
 Homepage = "https://github.com/JosephBARBIERDARNAL/drawarrow"
 Issues = "https://github.com/JosephBARBIERDARNAL/drawarrow/issues"
