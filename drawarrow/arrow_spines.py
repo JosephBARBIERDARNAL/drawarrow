@@ -1,15 +1,14 @@
 import matplotlib.pyplot as plt
 from matplotlib.axes import Axes
-from typing import Union
-from drawarrow import ax_arrow
+from .main import ax_arrow
 
 
 def arrow_spines(
-    bottom="toright",
-    left="totop",
-    right=None,
-    top=None,
-    ax: Union[Axes, None] = None,
+    bottom: str | None = "toright",
+    left: str | None = "totop",
+    right: str | None = None,
+    top: str | None = None,
+    ax: Axes | None = None,
     **arrow_style,
 ) -> Axes:
     """
@@ -40,11 +39,11 @@ def arrow_spines(
     ```
     """
     if ax is None:
-        ax = plt.gca()
+        ax: Axes = plt.gca()
 
     ax.spines[["top", "bottom", "right", "left"]].set_visible(False)
 
-    default_arrow_style = dict(
+    default_arrow_style: dict = dict(
         ax=ax,
         clip_on=False,
         zorder=10,
@@ -103,10 +102,3 @@ def arrow_spines(
             )
 
     return ax
-
-
-if __name__ == "__main__":
-    fig, ax = plt.subplots()
-    ax.scatter([1, 2, 3, 8, 6, 10], [2, 5, 3, 9, 2, 10])
-    arrow_spines(ax=ax, color="red")
-    fig.savefig("cache.png", dpi=300)

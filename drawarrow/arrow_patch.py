@@ -52,7 +52,7 @@ def _create_arrow(
             "Delete `invert=True` to remove this warning."
         )
 
-    rad = -radius if invert else radius
+    rad: int | float = -radius if invert else radius
 
     if "linewidth" in FAPargs.keys() or "lw" in FAPargs.keys():
         warnings.warn(
@@ -61,21 +61,19 @@ def _create_arrow(
         )
     FAPargs["linewidth"] = width
 
-    stylename = _find_stylename_arrowstyle(double_headed, fill_head)
-    arrowstyle_args = dict(
-        stylename=stylename, head_width=head_width, head_length=head_length
-    )
-    arrowstyle = ArrowStyle(**arrowstyle_args)
+    stylename: str = _find_stylename_arrowstyle(double_headed, fill_head)
+    arrowstyle_args: dict = dict(head_width=head_width, head_length=head_length)
+    arrowstyle = ArrowStyle(stylename=stylename, **arrowstyle_args)
 
     stylename, rad = _find_stylename_connectionstyle(inflection_position, rad)
-    connectionstyle_args = dict(stylename=stylename, rad=rad)
+    connectionstyle_args = dict(rad=rad)
     if inflection_position is not None:
         angleA, angleB = _angles_from_positions(
             tail_position, inflection_position, head_position
         )
         connectionstyle_args["angleA"] = angleA
         connectionstyle_args["angleB"] = angleB
-    connectionstyle = ConnectionStyle(**connectionstyle_args)
+    connectionstyle = ConnectionStyle(stylename=stylename, **connectionstyle_args)
 
     return FancyArrowPatch(
         tail_position,

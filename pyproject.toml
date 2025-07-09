@@ -5,9 +5,10 @@ description = "Drawing arrows for matplotlib made easy."
 authors = [
   { name="Joseph Barbier", email="joseph.barbierdarnal@gmail.com" },
 ]
+license = "MIT"
+license-files = ["LICENSE"]
 classifiers = [
   "Programming Language :: Python :: 3",
-  "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
   "Framework :: Matplotlib"
 ]
@@ -29,8 +30,17 @@ dev = [
 ]
 
 [build-system]
-requires = ["setuptools"]
+requires = [
+    "setuptools",
+    "setuptools-scm",
+]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["drawarrow"]
+
+[tool.uv.sources]
+drawarrow = { workspace = true }
 
 [project.urls]
 Homepage = "https://github.com/JosephBARBIERDARNAL/drawarrow"

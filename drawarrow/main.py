@@ -3,7 +3,6 @@ from matplotlib.patches import FancyArrowPatch
 from matplotlib.figure import Figure
 from matplotlib.axes import Axes
 import matplotlib.patheffects as path_effects
-from typing import Union
 
 from .arrow_patch import _create_arrow
 
@@ -19,8 +18,8 @@ def fig_arrow(
     width: float = 1,
     head_width: float = 4,
     head_length: float = 8,
-    fig: Union[Figure, None] = None,
-    shadow_style: Union[dict, None] = None,
+    fig: Figure | None = None,
+    shadow_style: dict | None = None,
     **kwargs,
 ) -> FancyArrowPatch:
     """
@@ -67,9 +66,9 @@ def fig_arrow(
     ```
     """
     if fig is None:
-        fig = plt.gcf()
+        fig: Figure = plt.gcf()
 
-    arrow = _create_arrow(
+    arrow: FancyArrowPatch = _create_arrow(
         tail_position=tail_position,
         head_position=head_position,
         inflection_position=inflection_position,
@@ -104,8 +103,8 @@ def ax_arrow(
     width: float = 1,
     head_width: float = 4,
     head_length: float = 8,
-    ax: Union[Axes, None] = None,
-    shadow_style: Union[dict, None] = None,
+    ax: Axes | None = None,
+    shadow_style: dict | None = None,
     **kwargs,
 ) -> FancyArrowPatch:
     """
@@ -151,9 +150,9 @@ def ax_arrow(
     ```
     """
     if ax is None:
-        ax = plt.gca()
+        ax: Axes = plt.gca()
 
-    arrow = _create_arrow(
+    arrow: FancyArrowPatch = _create_arrow(
         tail_position=tail_position,
         head_position=head_position,
         inflection_position=inflection_position,
