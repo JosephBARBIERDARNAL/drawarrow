@@ -12,31 +12,20 @@ def arrow_spines(
     **arrow_style,
 ) -> Axes:
     """
-    Replace matplotlib spines with arrows instead. By default it adds an arrow at the bottom spine (to the right) and an arrow at the left spine (to the top), but it can customized. See examples below.
+    Replace matplotlib spines with arrows instead. By default it adds an arrow at the bottom spine
+    (to the right) and an arrow at the left spine (to the top), but it can customized. See examples
+    below.
 
-    Parameters:
-
-    - `bottom`: direction of the arrow (either 'toright' or 'toleft'). No arrow if `None`
-    - `top`: direction of the arrow (either 'toright' or 'toleft'). No arrow if `None` (default)
-    - `left`: direction of the arrow (either 'totop' or 'tobottom'). No arrow if `None`
-    - `right`: direction of the arrow (either 'totop' or 'tobottom'). No arrow if `None` (default)
-    - `ax`: The matplotlib axes to draw the arrow on. If None, uses the current axes
-    - `arrow_style`: any additional arguments passed to [`ax_arrow()`](ax_arrow.md)
+    Args:
+        bottom: direction of the arrow (either 'toright' or 'toleft'). No arrow if `None`
+        top: direction of the arrow (either 'toright' or 'toleft'). No arrow if `None` (default)
+        left: direction of the arrow (either 'totop' or 'tobottom'). No arrow if `None`
+        right: direction of the arrow (either 'totop' or 'tobottom'). No arrow if `None` (default)
+        ax: The matplotlib axes to draw the arrow on. If None, uses the current axes
+        arrow_style: any additional arguments passed to [`ax_arrow()`](ax_arrow.md)
 
     Returns:
-
-    - `Axes`: the matplotlib axes
-
-    Usage
-
-    ```python
-    import matplotlib.pyplot as plt
-    from drawarrow import arrow_spines
-
-    fig, ax = plt.subplots()
-    arrow_spines(ax=ax, color="red")
-    plt.show()
-    ```
+        `Axes`: the matplotlib axes
     """
     if ax is None:
         ax: Axes = plt.gca()
