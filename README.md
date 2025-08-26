@@ -6,7 +6,7 @@ Drawing arrows for `matplotlib` made easy.
 
 Check out [the online documentation](https://python-graph-gallery.com/drawarrow/).
 
-![PyPI - Downloads](https://img.shields.io/pypi/dm/drawarrow.png)
+[![PyPI Downloads](https://static.pepy.tech/personalized-badge/drawarrow?period=total&units=INTERNATIONAL_SYSTEM&left_color=BLACK&right_color=GREEN&left_text=downloads)](https://pepy.tech/projects/drawarrow)
 ![](coverage-badge.svg)
 
 <br><br>
